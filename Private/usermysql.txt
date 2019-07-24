@@ -1,0 +1,11 @@
+create database library;
+use library;
+create table users(
+id int(10) PRIMARY KEY AUTO_INCREMENT,
+firstname text,
+lastname text,
+username varchar(100) UNIQUE,
+email varchar(100),
+usertype text(100),
+password varchar(100),
+);

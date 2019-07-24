@@ -1,0 +1,60 @@
+.jumbotron{
+
+    background-color:white;
+    height: 260px;
+    
+}
+
+#lib_pic{
+    width:220px; 
+    height: 160px;
+    float: left;
+    
+    
+}
+header{
+    background-color: white;
+ 
+}
+header h1{
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.nav{
+    background-color: black;
+}
+
+.nav-link{
+    color: white;
+}
+
+.lib_pic {
+    width: 1200px;
+    height: 600px;
+}
+
+.slider img {
+    display: block;
+    margin: 0px auto 0px auto;
+}
+
+a:hover{
+    display: block;
+    background-color: white;
+    color: black;
+}
+
+.footer{
+    background-color: white;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
