@@ -40,7 +40,7 @@ if (isset($_POST['username'])){
           }
       } else{
       echo "<div class='form'>
-      <h3>Username/password is incorrect.</h3>
+      <h3>Username or password is incorrect.</h3>
       <br/><a href='login.php'>Click here to Login</a></div>";
         }
 }else{
