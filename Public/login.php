@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,36 +12,33 @@
 <body>
 <?php
 require('../Private/configuration.php');
-
 session_start();
-
 if (isset($_POST['username'])){
       
   
-  $username = mysqli_real_escape_string($db, $_POST['username']);
-  $password = mysqli_real_escape_string($db, $_POST['password']);
-
-    $query = "SELECT * FROM `users` WHERE username = '$username' and password = '$password'";
+    $username = mysqli_real_escape_string($db, $_POST['username']);
+    $password = mysqli_real_escape_string($db, $_POST['password']);
+    
+    $query = "SELECT * FROM `users` WHERE username = '$username'";
     $result = $db->query($query);
-    $rows = mysqli_num_rows($result);
-       
-      if($rows==1){
-          $user = $result->fetch_array();
+    $user = $result->fetch_array();
+    
+    if(password_verify($password, $user["password"])){   
+      
+        if ($user['usertype'] == 'admin') {
           
-          if ($user['usertype'] == 'admin') {
-            $_SESSION['username'] = $username;
-            
-            header('Location: ../Private/adminindex.php');
-          } else{		  
           $_SESSION['username'] = $username;
+            header('Location: ../Private/adminindex.php');
+        } else{		  
           
+          $_SESSION['username'] = $username;
           header("Location: index.php");
           }
-      } else{
+        } else{
       echo "<div class='form'>
       <h3>Username or password is incorrect.</h3>
       <br/><a href='login.php'>Click here to Login</a></div>";
-        }
+          }
 }else{
 ?>
 <div class="container">
