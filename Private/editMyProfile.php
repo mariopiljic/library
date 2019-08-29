@@ -28,18 +28,12 @@
     $username = mysqli_real_escape_string($db, $_POST['username']); 
     $email = mysqli_real_escape_string($db, $_POST['email']);
     $password = mysqli_real_escape_string($db, $_POST['password']);
+    $hash_password = password_hash($password, PASSWORD_DEFAULT);
     
-    $query = "SELECT * FROM `users` WHERE username = '$username'";
-    $result = $db->query($query);
-    $rows = mysqli_num_rows($result);
-    if($rows == 1){
-      echo "<div class='form'>
-                  <h3>Please use different username.</h3>
-                  <br/><a href='MyProfile.php'>Click here to edit Your profile</a></div>";
-    } else{
+   
     
     $query = "UPDATE `users` SET firstname = '$firstname', lastname = '$lastname', 
-                username = '$username', email = '$email', usertype = 'admin', password = '$password' WHERE id = '$id'";
+                username = '$username', email = '$email', usertype = 'admin', password = '$hash_password' WHERE id = '$id'";
               
           $result = $db->query($query);
       
@@ -47,8 +41,11 @@
             echo "<div class='form'>
                   <h3>You are edited your informations successfully.</h3>
                   <br/>Click here to <a href='../Public/login.php'>Login</a></div>";
-          }
-        }
+          } else{
+              echo "<div class='form'>
+              <h3>Please use different username.</h3>";
+            }
+        
   } else{
 ?>
 <div class="container">
