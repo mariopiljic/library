@@ -7,5 +7,5 @@ lastname text,
 username varchar(100) UNIQUE,
 email varchar(100),
 usertype text(100),
-password varchar(100)
+password varchar(255)
 );
