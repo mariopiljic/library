@@ -22,6 +22,7 @@
         $email = mysqli_real_escape_string($db, $_POST['email']);
         $usertype = mysqli_real_escape_string($db, $_POST['usertype']);
         $password = mysqli_real_escape_string($db, $_POST['password']);
+        $hash_password = password_hash($password, PASSWORD_DEFAULT);
         
         $query = "SELECT * FROM `users` WHERE username = '$username'";
         $result = $db->query($query);
@@ -33,7 +34,7 @@
         } else{
         
                 $query = "INSERT into `users` (firstname, lastname, username, email, usertype, password)
-                            VALUES ('$firstname', '$lastname', '$username', '$email', '$usertype', '$password' )";
+                            VALUES ('$firstname', '$lastname', '$username', '$email', '$usertype', '$hash_password' )";
                 $result = $db->query($query);
                 
                 if($result){

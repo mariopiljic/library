@@ -21,6 +21,7 @@
     $username = mysqli_real_escape_string($db, $_POST['username']); 
     $email = mysqli_real_escape_string($db, $_POST['email']);
     $password = mysqli_real_escape_string($db, $_POST['password']);
+    $hash_password = password_hash($password, PASSWORD_DEFAULT);
 
     $query = "SELECT * FROM `users` WHERE username = '$username'";
     $result = $db->query($query);
@@ -30,9 +31,10 @@
                   <h3>Please use different username.</h3>
                   <br/><a href='signup.php'>Click here to signup</a></div>";
     } else{
-    
+
+      
       $query = "INSERT into `users` (firstname, lastname, username, email, usertype, password)
-                VALUES ('$firstname', '$lastname', '$username', '$email', 'user', '$password')";
+                VALUES ('$firstname', '$lastname', '$username', '$email', 'user', '$hash_password')";
       $result = $db->query($query);
       
           if($result){
