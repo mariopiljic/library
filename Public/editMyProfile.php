@@ -22,7 +22,7 @@
 
 
 
-    if (isset($_POST['username'])){
+  if (isset($_POST['username'])){
     
     
     $firstname = mysqli_real_escape_string($db, $_POST['firstname']);
@@ -30,18 +30,11 @@
     $username = mysqli_real_escape_string($db, $_POST['username']); 
     $email = mysqli_real_escape_string($db, $_POST['email']);
     $password = mysqli_real_escape_string($db, $_POST['password']);
-    
-    $query = "SELECT * FROM `users` WHERE username = '$username'";
-    $result = $db->query($query);
-    $rows = mysqli_num_rows($result);
-    if($rows == 1){
-      echo "<div class='form'>
-                  <h3>Please use different username.</h3>
-                  <br/><a href='MyProfile.php'>Click here to edit Your profile.</a></div>";
-    } else{
+    $hash_password = password_hash($password, PASSWORD_DEFAULT);
+
     
     $query = "UPDATE `users` SET firstname = '$firstname', lastname = '$lastname', 
-                username = '$username', email = '$email', usertype = 'user', password = '$password' WHERE id = '$id'";
+                username = '$username', email = '$email', usertype = 'user', password = '$hash_password' WHERE id = '$id'";
               
           $result = $db->query($query);
       
@@ -49,8 +42,11 @@
             echo "<div class='form'>
                   <h3>You are edited your informations successfully.</h3>
                   <br/><a href='login.php'>Click here to Login</a></div>";
-          }
-        }
+          } else{
+              echo "<div class='form'>
+              <h3>Please use different username.</h3>";
+            }
+        
   } else{
 ?>
 <div class="container">
