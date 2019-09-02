@@ -48,7 +48,7 @@
         
   } else{
 ?>
-<div class="container">
+<div id="editadmin" class="container">
   
   <form action="" class="was-validated" method="post">
     <div class="form-group">
