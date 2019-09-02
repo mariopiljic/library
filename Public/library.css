@@ -51,7 +51,7 @@ a:hover{
     text-align: center;
 }
 
-.container{
+#login, #signup, #editprofile, #editadmin, #editbook, #insert, #edit, #insertbook{
     display: flex;
     flex-direction: column;
     justify-content: center;
