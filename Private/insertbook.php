@@ -32,7 +32,7 @@
           }
   } else{
 ?>
-<div class="container">
+<div id="insertbook" class="container">
   <h2>Adding Book</h2>
   <form action="" method="post">
     <div class="form-group">
