@@ -36,7 +36,7 @@
           }
   } else{
 ?>
-<div class="container">
+<div id="editbook" class="container">
   <h2>Editing Book</h2>
   <form action="" method="post">
     <div class="form-group">
