@@ -45,7 +45,7 @@
       }      
   } else{
 ?>
-<div class="container">
+<div id="signup" class="container">
   <h2>Please sign up for free.</h2>
   <form action="" class="was-validated" method="post">
     <div class="form-group">
