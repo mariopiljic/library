@@ -35,7 +35,7 @@
             <?php 
             include('../Private/configuration.php');
             
-            $query = "SELECT * FROM `books`";
+            $query = "SELECT * FROM `books` ORDER BY `title`";
             $result = $db->query($query);
             
             while($book = $result->fetch_assoc()){
