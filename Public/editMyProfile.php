@@ -49,7 +49,7 @@
         
   } else{
 ?>
-<div class="container">
+<div id="editprofile" class="container">
   
   <form action="" class="was-validated" method="post">
     <div class="form-group">
