@@ -48,7 +48,7 @@
       <input type="section" class="form-control" id="section" placeholder="Enter section" name="section">
     </div>
     
-    <button type="submit" class="btn btn-primary">Add</button>
+    <button style="width:80px;" type="submit" class="btn btn-primary">Add</button>
   </form>
 </div>
 <?php } ?>
