@@ -41,7 +41,9 @@
           if($result){
             echo "<div class='form'>
                   <h3>You are edited your informations successfully.</h3>
-                  <br/><a href='login.php'>Click here to Login</a></div>";
+                  <p>Click here to login</p>
+                  <a style='width:80px;' href='login.php' role='button' class='btn btn-primary' name='login_btn'>Login</a> 
+                  </div>";
           } else{
               echo "<div class='form'>
               <h3>Please use different username.</h3>";
@@ -78,11 +80,11 @@
     </div>
     <div class="form-group">
       <label for="password">Password:</label>
-      <input type="password" class="form-control" id="password" placeholder="<?php echo htmlspecialchars($user['password']); ?>" name="password" required>
+      <input type="password" class="form-control" id="password" placeholder="" name="password" required>
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please enter password.</div>
     </div>
-    <button type="submit" class="btn btn-primary" name="signup_btn">Edit</button>
+    <button style="width:80px;" type="submit" class="btn btn-primary" name="edit_btn">Edit</button>
   </form>
   
 </div>
