@@ -26,11 +26,14 @@
                 $result = $db->query($query);
                 
                 if($result){
-                    echo "<div class='form'>
-                    <h3>You added new book successfully.</h3>
-                    <br/><a href='books.php'>Click here to continue.</a></div>";
-          }
-  } else{
+                    echo 
+                      "<div class='form'>
+                        <h3>You added new book successfully.</h3>
+                        <p>Click here to continue.</p>
+                        <a href='books.php' style='width:80px;' role='button' class='btn btn-primary'>Back</a>
+                      </div>";
+                }
+    } else{
 ?>
 <div id="insertbook" class="container">
   <h2>Adding Book</h2>
