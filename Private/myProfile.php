@@ -13,6 +13,7 @@
 <body>
 
 <?php include('adminheader.php'); ?>
+
 <?php
 
 include('configuration.php');
@@ -24,40 +25,29 @@ $result = $db->query($query);
 $user = $result->fetch_array();
 
 ?>
-  <div>
-  
+<div>
   <form >
     <div class="form-group">
       <label for="firstname">FIrstname:</label>
       <input type="text" class="form-control" id="firstname" placeholder="<?php echo htmlspecialchars($user['firstname']); ?>" name="firstname" required readonly>
-      
     </div>
     <div class="form-group">
       <label for="lastname">Lastname:</label>
       <input type="text" class="form-control" id="lastname" placeholder="<?php echo htmlspecialchars($user['lastname']); ?>" name="lastname" required readonly>
-      
     </div>
     <div class="form-group">
       <label for="username">Username:</label>
       <input type="text" class="form-control" id="username" placeholder="<?php echo htmlspecialchars($user['username']); ?>" name="username" required readonly>
-      
     </div>
     <div class="form-group">
       <label for="email">Email address:</label>
-      <input type="email" class="form-control" id="email" placeholder="<?php echo htmlspecialchars($user['email']); ?>" name="email" required readonly>
-      
+      <input type="email" class="form-control" id="email" placeholder="<?php echo htmlspecialchars($user['email']); ?>" name="email" required readonly> 
     </div>
-    <div class="form-group">
-      <label for="password">Password:</label>
-      <input type="password" class="form-control" id="password" placeholder="<?php echo htmlspecialchars($user['password']); ?>" name="password" required readonly>
-      
-    </div>
-    
+      <a href="editMyProfile.php?id=<?php echo htmlspecialchars($user['id']); ?>" style=" width:80px;" role="button" class="btn btn-primary">Edit</a>
+      <p>If you want to edit your profile,please click on the button.</p>
   </form>
-  <a href="editMyProfile.php?id=<?php echo htmlspecialchars($user['id']); ?>">If You want to edit Your profile,please click here!</a>
 </div>
 
-
-  <?php include('adminfooter.php'); ?>
+<?php include('adminfooter.php'); ?>
 </body>
-</html>  
+</html> 
