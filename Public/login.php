@@ -57,7 +57,8 @@ if (isset($_POST['username'])){
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please enter password.</div>
     </div>
-    <button type="submit" class="btn btn-primary" name="login_btn">Login</button>
+      <button style="width:80px;" type="submit" class="btn btn-primary" name="login_btn">Login</button>
+      <a style="float:right; width:80px;" href="signup.php" role="button" class="btn btn-primary" name="signup_btn">Signup</a>
   </form>
   <a href="signup.php">Not a member?Please signup!</a>
 </div>
