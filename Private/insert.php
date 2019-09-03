@@ -28,9 +28,12 @@
         $result = $db->query($query);
         $rows = mysqli_num_rows($result);
         if($rows == 1){
-          echo "<div class='form'>
-                <h3>Please use different username.</h3>
-                <br/><a href='insert.php'>Click here to continue</a></div>";
+          echo 
+            "<div class='form'>
+              <h3>Please use different username.</h3>
+              <p>Click here to continue.</p>
+              <a href='insert.php' style='width:80px;' role='button' class='btn btn-primary'>Back</a>
+            </div>";
         } else{
         
                 $query = "INSERT into `users` (firstname, lastname, username, email, usertype, password)
@@ -38,9 +41,12 @@
                 $result = $db->query($query);
                 
                 if($result){
-                    echo "<div class='form'>
-                    <h3>You added new user successfully.</h3>
-                    <br/><a href='users.php'>Click here to continue.</a></div>";
+                  echo 
+                    "<div class='form'>
+                      <h3>You added new user successfully.</h3>
+                      <p>Click here to continue.</p>
+                      <a href='users.php' style='width:80px;' role='button' class='btn btn-primary'>Back</a>
+                    </div>";
                 }
           } 
   } else{
@@ -87,7 +93,7 @@
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please enter password.</div>
     </div>
-    <button type="submit" class="btn btn-primary" name="signup_btn">Add User</button>
+    <button style="width:80px;"type="submit" class="btn btn-primary" name="signup_btn">Add</button>
   </form>
   
 </div>
