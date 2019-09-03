@@ -13,8 +13,12 @@
 </head>
 <body>
 
-  <?php include('adminheader.php'); ?>
-    <a href="insert.php"> Click here if you want to add new user! </a>
+<?php include('adminheader.php'); ?>
+    <div>
+        <p>Click here if you want to add new user!</p>
+        <a href="insert.php" style="width:80px;" role="button" class="btn btn-primary">Add</a>
+        </div>
+    <div>
     <div>
         <table class="table table-bordered">
             <thead>
@@ -25,7 +29,6 @@
                     <th>Username</th>
                     <th>Email</th>
                     <th>User type</th>
-                    <th>Password</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
@@ -48,7 +51,6 @@
                     <td><?php echo htmlspecialchars($user['username']); ?></td>
                     <td><?php echo htmlspecialchars($user['email']); ?></td>
                     <td><?php echo htmlspecialchars($user['usertype']); ?></td>
-                    <td><?php echo htmlspecialchars($user['password']); ?></td>
                     <td><a href="edit.php?id=<?php echo htmlspecialchars($user['id']); ?>">Edit</a></td>
                     <td><a href="delete.php?id=<?php echo htmlspecialchars($user['id']); ?>" class="delete">Delete</a></td>
                 </tr>
@@ -71,4 +73,4 @@
 
   <?php include('adminfooter.php'); ?>
 </body>
-</html>  
+</html> 
