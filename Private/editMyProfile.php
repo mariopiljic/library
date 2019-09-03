@@ -38,12 +38,16 @@
           $result = $db->query($query);
       
           if($result){
-            echo "<div class='form'>
-                  <h3>You are edited your informations successfully.</h3>
-                  <br/>Click here to <a href='../Public/login.php'>Login</a></div>";
+            echo 
+              "<div class='form'>
+              <h3>You are edited your informations successfully.</h3>
+              <p>Click here to login</p>
+              <a style='width:80px;' href='..//Public/login.php' role='button' class='btn btn-primary' name='login_btn'>Login</a> 
+              </div>";
           } else{
-              echo "<div class='form'>
-              <h3>Please use different username.</h3>";
+              echo 
+                "<div class='form'>
+                <h3>Please use different username.</h3>";
             }
         
   } else{
@@ -77,14 +81,15 @@
     </div>
     <div class="form-group">
       <label for="password">Password:</label>
-      <input type="password" class="form-control" id="passwordd" placeholder="<?php echo htmlspecialchars($user['password']); ?>" name="password" required>
+      <input type="password" class="form-control" id="passwordd" placeholder="" name="password" required>
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please enter password.</div>
     </div>
-    <button type="submit" class="btn btn-primary" name="signup_btn">Edit</button>
+    <button style="width:80px;" type="submit" class="btn btn-primary" name="edit_btn">Edit</button>
   </form>
   
 </div>
 <?php } ?>
 </body>
+</html>
 </html>
