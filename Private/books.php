@@ -14,7 +14,11 @@
 <body>
 
   <?php include('adminheader.php'); ?>
-    <a href="insertbook.php"> Click here if you want to add new book! </a>
+    <div>
+        <p>Click here if you want to add new book!</p>
+        <a href="insertbook.php" style="width:80px;" role="button" class="btn btn-primary">Add</a>
+        </div>
+    <div>
     <div>
         <table class="table table-bordered">
             <thead>
