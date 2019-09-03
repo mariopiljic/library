@@ -30,10 +30,13 @@
                 $result = $db->query($query);
                 
                 if($result){
-                    echo "<div class='form'>
-                    <h3>You edited book successfully.</h3>
-                    <br/><a href='books.php'>Click here to continue.</a></div>";
-          }
+                    echo 
+                      "<div class='form'>
+                        <h3>You edited book successfully.</h3>
+                        <p>Click here to continue.</p>
+                        <a href='books.php' style='width:80px;' role='button' class='btn btn-primary'>Back</a>
+                      </div>";
+            }
   } else{
 ?>
 <div id="editbook" class="container">
@@ -52,7 +55,7 @@
       <input type="section" class="form-control" id="section" placeholder="<?php echo htmlspecialchars($book['section']); ?>" name="section">
     </div>
     
-    <button type="submit" class="btn btn-primary">Edit</button>
+    <button style="width:80px;" type="submit" class="btn btn-primary">Edit</button>
   </form>
 </div>
 <?php } ?>
