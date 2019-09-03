@@ -38,12 +38,19 @@
           $result = $db->query($query);
       
           if($result){
-            echo "<div class='form'>
-                  <h3>You are edited informations successfully.</h3>
-                  <br/><a href='users.php'>Click here to continue.</a></div>";
+            echo 
+              "<div class='form'>
+                  <h3>You have edited informations successfully.</h3>
+                  <p>Click here to continue.</p>
+                  <a href='users.php' style='width:80px;' role='button' class='btn btn-primary'>Back</a>
+                </div>";
           } else{
-            echo "<div class='form'>
-            <h3>Please use different username.</h3>";
+            echo 
+              "<div class='form'>
+                <h3>Please use different username.</h3>
+                <p>Click here to continue.</p>
+                <a href='users.php' style='width:80px;' role='button' class='btn btn-primary'>Back</a>
+              </div>";
             }
         
   } else{
@@ -86,11 +93,11 @@
     </div>
     <div class="form-group">
       <label for="password">Password:</label>
-      <input type="password" class="form-control" id="password" placeholder="<?php echo htmlspecialchars($user['password']); ?>" name="password" required>
+      <input type="password" class="form-control" id="password" placeholder="" name="password" required>
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please enter password.</div>
     </div>
-    <button type="submit" class="btn btn-primary" name="signup_btn">Edit</button>
+    <button style="width:80px;" type="submit" class="btn btn-primary" name="edit_btn">Edit</button>
   </form>
   
 </div>
