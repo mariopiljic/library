@@ -6,7 +6,7 @@
               <h1>My Library</h1>
             </div>
           </div>
-          <p style="text-align:right;"><a href="logout.php">Logout</a></p>
+          <p style="text-align:right;"><a href="logout.php" role="button" class="btn btn-danger">Logout</a></p>
     </div>
     
     <nav>
