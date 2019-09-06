@@ -1,8 +1,8 @@
 <footer>
     <div class="footer">
-      <pre>My Library</pre>
-      <pre>Adress</pre>
-      <pre>Phone</pre>
-      <pre>Email adress</pre>
+      <p>My Library</p>
+      <p>Adress</p>
+      <p>Phone</p>
+      <p>Email adress</p>
     </div>
 </footer>
