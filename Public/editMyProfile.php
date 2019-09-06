@@ -46,11 +46,11 @@
                   </div>";
           } else{
               echo "<div class='form'>
-              <h3>Please use different username.</h3>"
+              <h3>Please use different username.</h3>
               <p>Click here to go back</p>
               <a style='width:80px;' href='myProfile.php' role='button' class='btn btn-primary' name='edit_btn'>Back</a> 
               </div>";
-            }
+          }
         
   } else{
 ?>
