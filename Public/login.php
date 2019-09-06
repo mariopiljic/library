@@ -36,8 +36,10 @@ if (isset($_POST['username'])){
           }
         } else{
       echo "<div class='form'>
-      <h3>Username or password is incorrect.</h3>
-      <br/><a href='login.php'>Click here to Login</a></div>";
+              <h3>Username or password is incorrect.</h3>
+              <p>Click here to try again</p>
+              <a style='width:80px;' href='login.php' role='button' class='btn btn-primary' name='login_btn'>Login</a> 
+            </div>";
           }
 }else{
 ?>
