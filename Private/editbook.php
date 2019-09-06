@@ -34,7 +34,7 @@
                       "<div class='form'>
                         <h3>You edited book successfully.</h3>
                         <p>Click here to continue.</p>
-                        <a href='books.php' style='width:80px;' role='button' class='btn btn-primary'>Back</a>
+                        <a href='books.php' style='width:80px;' role='button' class='btn btn-success'>Back</a>
                       </div>";
             }
   } else{
@@ -55,7 +55,7 @@
       <input type="section" class="form-control" id="section" placeholder="<?php echo htmlspecialchars($book['section']); ?>" name="section">
     </div>
     
-    <button style="width:80px;" type="submit" class="btn btn-primary">Edit</button>
+    <button style="width:80px;" type="submit" class="btn btn-success">Edit</button>
   </form>
 </div>
 <?php } ?>
