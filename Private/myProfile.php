@@ -25,7 +25,7 @@ $result = $db->query($query);
 $user = $result->fetch_array();
 
 ?>
-<div>
+<div class="table-responsive">
   <h2><?php echo htmlspecialchars($user['firstname']) ?>
       <?php echo htmlspecialchars($user['lastname']); ?>
   </h2>
