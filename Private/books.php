@@ -16,7 +16,7 @@
   <?php include('adminheader.php'); ?>
     <div>
         <p>Click here if you want to add new book!</p>
-        <a href="insertbook.php" style="width:80px;" role="button" class="btn btn-primary">Add</a>
+        <a href="insertbook.php" style="width:80px;" role="button" class="btn btn-danger">Add</a>
         </div>
     <div>
     <div>
