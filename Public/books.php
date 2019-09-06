@@ -14,6 +14,7 @@
 
 <?php include('header.php'); ?>
 
+<p>Enter the book you want to search:</p>
 <form class="form-inline mr-auto" action="search.php" method="post">
     <div class="input-group mb-3">
       <input type="text" class="form-control" placeholder="Search..." id="search" name="search" aria-label="Book search" aria-describedby="basic-addon2">
