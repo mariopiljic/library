@@ -28,8 +28,10 @@
     $rows = mysqli_num_rows($result);
     if($rows == 1){
       echo "<div class='form'>
-                  <h3>Please use different username.</h3>
-                  <br/><a href='signup.php'>Click here to signup</a></div>";
+                <h3>Please use different username.</h3>
+                <p>Click here to try again</p>
+                <a style='width:80px;' href='signup.php' role='button' class='btn btn-primary' name='signup_btn'>Signup</a> 
+            </div>";
     } else{
 
       
@@ -39,8 +41,10 @@
       
           if($result){
             echo "<div class='form'>
-                  <h3>You are registered successfully.</h3>
-                  <br/><a href='login.php'>Click here to Login</a></div>";
+                      <h3>You are registered successfully.</h3>
+                      <p>Click here to login</p>
+                      <a style='width:80px;' href='login.php' role='button' class='btn btn-primary' name='login_btn'>Login</a> 
+                  </div>";
           } 
       }      
   } else{
@@ -78,10 +82,10 @@
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please enter password.</div>
     </div>
-      <button style="width:80px;"type="submit" class="btn btn-primary" name="signup_btn">Signup</button>
-      <a style="float:right; width:80px;" href="login.php" role="button" class="btn btn-primary" name="login_btn">Login</a>
+    <button style="width:80px;"type="submit" class="btn btn-primary" name="signup_btn">Signup</button>
+    <a style="float:right; width:80px;" href="login.php" role="button" class="btn btn-primary" name="login_btn">Login</a>
   </form>
-  <a href="login.php">Already a member?Please login!</a>
+
 </div>
 <?php } ?>
 </body>
