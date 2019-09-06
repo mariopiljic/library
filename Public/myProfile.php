@@ -25,7 +25,7 @@ $result = $db->query($query);
 $user = $result->fetch_array();
 
 ?>
-<div class="containe">
+<div>
   <h2><?php echo htmlspecialchars($user['firstname']) ?>
       <?php echo htmlspecialchars($user['lastname']); ?>
   </h2>
