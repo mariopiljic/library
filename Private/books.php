@@ -19,7 +19,7 @@
         <a href="insertbook.php" style="width:80px;" role="button" class="btn btn-danger">Add</a>
         </div>
     <div>
-    <div>
+    <div class="table-responsive">
         <table class="table table-bordered">
             <thead>
                 <tr>
