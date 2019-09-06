@@ -24,7 +24,7 @@
     </div>
 </form>
 <h5>Click on the headings, if you want to sort results!</h5> 
-  <div>
+  <div class="table-responsive">
         <table class="table table-bordered">
             <thead>
                 <tr>
