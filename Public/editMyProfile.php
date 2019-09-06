@@ -40,7 +40,7 @@
       
           if($result){
             echo "<div class='form'>
-                  <h3>You are edited your informations successfully.</h3>
+                  <h3>You have edited your informations successfully.</h3>
                   <p>Click here to login</p>
                   <a style='width:80px;' href='login.php' role='button' class='btn btn-primary' name='login_btn'>Login</a> 
                   </div>";
