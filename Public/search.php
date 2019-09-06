@@ -26,7 +26,7 @@
       if(mysqli_num_rows($result) > 0){
   ?>
 
-  <div class="container">
+  <div id="minh">
       
       <table class="table table-bordered">
         <thead>
@@ -50,9 +50,9 @@
   </div>
     
   <?php }else { 
-      echo "<div class='container'>
+      echo "<div id='minh'>
       <h3>There is no entry you have searched.</h3>
-      <h3>Please try something else.</h3>" ; 
+      <h3>Please try something else.</h3> </div>" ;
         } ?>
     
   <?php } ?>
