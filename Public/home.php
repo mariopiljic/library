@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,14 +13,14 @@
 <body>
 
   <?php include('header.php'); ?>
-  
+ 
   <div class="slider">
-    <div><img class="lib_pic" src="Images/Library1.jpg"></div>
-    <div><img class="lib_pic" src="Images/Library2.jpg"></div>
-    <div><img class="lib_pic" src="Images/Library3.jpg"></div>
+    <div><img style="max-width:100%;height:auto;" class="lib_pic" src="Images/Library1.jpg"></div>
+    <div><img style="max-width:100%;height:auto;" class="lib_pic" src="Images/Library2.jpg"></div>
+    <div><img style="max-width:100%;height:auto;" class="lib_pic" src="Images/Library3.jpg"></div>
   </div>
 
-  <?php include('footer.php'); ?>
+  <?php include('footer.php') ?>
 
   <script>
     $('.slider').bxSlider({
