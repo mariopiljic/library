@@ -16,9 +16,9 @@
   <?php include('adminheader.php'); ?>
   
   <div class="slider">
-    <div><img class="lib_pic" src="../Public/Images/Library1.jpg"></div>
-    <div><img class="lib_pic" src="../Public/Images/Library2.jpg"></div>
-    <div><img class="lib_pic" src="../Public/Images/Library3.jpg"></div>
+    <div><img style="max-width:100%;height:auto;" class="lib_pic" src="../Public/Images/Library1.jpg"></div>
+    <div><img style="max-width:100%;height:auto;" class="lib_pic" src="../Public/Images/Library4.jpg"></div>
+    <div><img style="max-width:100%;height:auto;" class="lib_pic" src="../Public/Images/Library5.jpg"></div>
   </div>
 
   <?php include('adminfooter.php'); ?>
