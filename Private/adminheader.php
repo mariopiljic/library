@@ -1,12 +1,12 @@
 <header>
     <div class="jumbotron">
         <div class="media">
-            <img id="lib_pic" src="../Public/Images/Library_logo.jpg" alt="Library_sign" class="align-self-center mr-3">
-            <div class="align-self-center mr-3">
-              <h1>My Library</h1>
-            </div>
-          </div>
-          <p style="text-align:right;"><a href="../Public/logout.php"role="button" class="btn btn-danger">Logout</a></p>
+            <img style="max-width:40%;height:auto;" id="lib_pic" src="../Public/Images/Library_logo.jpg" alt="Library_sign" class="align-self-center mr-3">
+              <div class="align-self-center mr-3">
+                <h1 style="font-size:5vw;">My Library</h1>
+              </div>
+        </div>
+        <p style="text-align:right;"><a href="../Public/logout.php" role="button" class="btn btn-danger">Logout</a></p>
     </div>
     
     <nav>
@@ -24,8 +24,8 @@
             <a class="nav-link" href="books.php">Books</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
-            </li>
-        </ul>
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+      </ul>
     </nav>
-  </header>
+</header>
