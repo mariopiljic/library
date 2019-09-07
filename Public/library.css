@@ -1,28 +1,24 @@
 .jumbotron{
-
-    background-color:white;
-    height: 260px;
-    
+    background-color:black;
 }
 
 #lib_pic{
-    width:220px; 
-    height: 160px;
+    width:240px; 
+    height: 180px;
     float: left;
-    
-    
 }
+
 header{
-    background-color: white;
- 
+    background-color: black;
 }
+
 header h1{
     font-family: 'Times New Roman', Times, serif;
-    
+    color: gold;
 }
 
 .nav{
-    background-color: black;
+    background-color: rgb(221, 51, 51);
 }
 
 .nav-link{
@@ -40,15 +36,15 @@ header h1{
 }
 
 a:hover{
-    display: block;
+    display: inline-block;
     background-color: white;
     color: black;
 }
 
 .footer{
-    background-color: white;
-    margin-top: 0px;
+    background-color: black;
     text-align: center;
+    color: gold;
 }
 
 #login, #signup, #editprofile, #editadmin, #editbook, #insert, #edit, #insertbook{
@@ -57,4 +53,17 @@ a:hover{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+}
+
+body{
+    max-width: 1400px;
+    margin: 0px auto;
+}
+
+header a{
+    color: white;
+}
+
+#minh{
+    min-height: 400px;
 }
