@@ -97,7 +97,7 @@
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please enter password.</div>
     </div>
-    <button style="width:80px;" type="submit" class="btn btn-primary" name="edit_btn">Edit</button>
+    <button style="width:80px;" type="submit" class="btn btn-primary" name="edit_btn">Done</button>
   </form>
   
 </div>
