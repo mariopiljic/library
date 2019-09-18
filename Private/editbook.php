@@ -55,7 +55,7 @@
       <input type="section" class="form-control" id="section" placeholder="<?php echo htmlspecialchars($book['section']); ?>" name="section">
     </div>
     
-    <button style="width:80px;" type="submit" class="btn btn-success">Edit</button>
+    <button style="width:80px;" type="submit" class="btn btn-success">Done</button>
   </form>
 </div>
 <?php } ?>
