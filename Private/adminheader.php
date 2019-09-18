@@ -11,7 +11,7 @@
           <img style="width:100%; height:220px;"  src="..//Public/Images/Library5.jpg" >
         </div>
         <div class="centered"><h1 style="font-size:6vw;">My Library</h1></div>
-        <div class="bottom-right"><a href="logout.php" role="button" class="btn btn-danger">Logout</a></div>
+        <div class="bottom-right"><a href="..//Public/logout.php" role="button" class="btn btn-danger">Logout</a></div>
       </div>
     </div>
     
