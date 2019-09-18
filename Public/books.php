@@ -9,28 +9,32 @@
   <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script  src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <link href="library.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 
 <?php include('header.php'); ?>
 
-<p>Enter the book you want to search:</p>
-<form class="form-inline mr-auto" action="search.php" method="post">
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Search..." id="search" name="search" aria-label="Book search" aria-describedby="basic-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="submit">Search</button>
-        </div>
-    </div>
-</form>
-<h5>Click on the headings, if you want to sort results!</h5> 
-  <div class="table-responsive">
+<div class="table-responsive">
+        
+        <form style="padding-bottom: 1em;" class="form-inline mr-auto" action="search.php" method="post">
+            <div class="input-group mb-3"> 
+            <input data-toggle="tooltip" title="Enter the book title you want to search." type="text" class="form-control" placeholder="Search..." id="search" name="search" aria-label="Book search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+        
+  
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th  class="sort-heading" id="title-asc">Title</th>
-                    <th  class="sort-heading" id="author-asc">Author</th>
-                    <th  class="sort-heading" id="section-asc">Section</th>
+                    <th style="cursor: row-resize;" class="sort-heading" id="title-asc">Title</th>
+                    <th style="cursor: row-resize;" class="sort-heading" id="author-asc">Author</th>
+                    <th style="cursor: row-resize;" class="sort-heading" id="section-asc">Section</th>
                 </tr>
             </thead>
             <?php 
@@ -52,9 +56,9 @@
             <?php } ?>
             
         </table>
-    </div>
+</div>
 
-    <?php include('footer.php') ?>
+<?php include('footer.php') ?>
 </body>
 </html>  
 <script>
