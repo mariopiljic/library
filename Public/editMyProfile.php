@@ -46,16 +46,14 @@
           $result = $db->query($query);
       
           if($result){
-            echo "<div class='form'>
+            echo "<div id='minh'>
                   <h3>You have edited your informations successfully.</h3>
-                  <p>Click here to login</p>
-                  <a style='width:80px;' href='login.php' role='button' class='btn btn-primary' name='login_btn'>Login</a> 
+                  <a data-toggle='tooltip' title='Click here to login.' style='width:80px;' href='login.php' role='button' class='btn btn-primary' name='login_btn'>Login</a> 
                   </div>";
           } else{
-              echo "<div class='form'>
+              echo "<div id='minh'>
               <h3>Please use different username.</h3>
-              <p>Click here to go back</p>
-              <a style='width:80px;' href='myProfile.php' role='button' class='btn btn-primary' name='edit_btn'>Back</a> 
+              <a data-toggle='tooltip' title='Click here to go back.' style='width:80px;' href='myProfile.php' role='button' class='btn btn-primary' name='edit_btn'>Back</a> 
               </div>";
           }
         
