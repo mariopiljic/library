@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script  src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <link href="../Public/library.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link href="../Public/library.css" rel="stylesheet">
 </head>
 <body>
+
+<?php include('adminheader.php'); ?>
+
 <?php
   require('configuration.php');
   session_start();
@@ -27,10 +34,9 @@
                 
                 if($result){
                     echo 
-                      "<div class='form'>
+                      "<div id='minh'>
                         <h3>You added new book successfully.</h3>
-                        <p>Click here to continue.</p>
-                        <a href='books.php' style='width:80px;' role='button' class='btn btn-success'>Back</a>
+                        <a data-toggle='tooltip' title='Click here to continue.' href='books.php' style='width:80px;' role='button' class='btn btn-success'>Back</a>
                       </div>";
                 }
     } else{
@@ -55,5 +61,7 @@
   </form>
 </div>
 <?php } ?>
+
+<?php include('adminfooter.php'); ?>
 </body>
-</html>
+</html>  
