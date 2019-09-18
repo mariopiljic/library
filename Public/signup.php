@@ -27,10 +27,9 @@
     $result = $db->query($query);
     $rows = mysqli_num_rows($result);
     if($rows == 1){
-      echo "<div class='form'>
+      echo "<div id='minh'>
                 <h3>Please use different username.</h3>
-                <p>Click here to try again</p>
-                <a style='width:80px;' href='signup.php' role='button' class='btn btn-primary' name='signup_btn'>Signup</a> 
+                <a data-toggle='tooltip' title='Click here to try again.' style='width:80px;' href='signup.php' role='button' class='btn btn-primary' name='signup_btn'>Signup</a> 
             </div>";
     } else{
 
@@ -40,10 +39,9 @@
       $result = $db->query($query);
       
           if($result){
-            echo "<div class='form'>
+            echo "<div id='minh'>
                       <h3>You are registered successfully.</h3>
-                      <p>Click here to login</p>
-                      <a style='width:80px;' href='login.php' role='button' class='btn btn-primary' name='login_btn'>Login</a> 
+                      <a data-toggle='tooltip' title='Click here to login.' style='width:80px;' href='login.php' role='button' class='btn btn-primary' name='login_btn'>Login</a> 
                   </div>";
           } 
       }      
