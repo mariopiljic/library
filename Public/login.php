@@ -35,10 +35,9 @@ if (isset($_POST['username'])){
           header("Location: index.php");
           }
         } else{
-      echo "<div class='form'>
+      echo "<div id='minh'>
               <h3>Username or password is incorrect.</h3>
-              <p>Click here to try again</p>
-              <a style='width:80px;' href='login.php' role='button' class='btn btn-primary' name='login_btn'>Login</a> 
+              <a data-toggle='tooltip' title='Click here to try again.' style='width:80px;' href='login.php' role='button' class='btn btn-primary' name='login_btn'>Login</a> 
             </div>";
           }
 }else{
@@ -59,10 +58,10 @@ if (isset($_POST['username'])){
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please enter password.</div>
     </div>
-      <button style="width:80px;" type="submit" class="btn btn-primary" name="login_btn">Login</button>
-      <a style="float:right; width:80px;" href="signup.php" role="button" class="btn btn-primary" name="signup_btn">Signup</a>
+    <button style="width:80px;" type="submit" class="btn btn-primary" name="login_btn">Login</button>
+    <a style="float:right; width:80px;" href="signup.php" role="button" class="btn btn-primary" name="signup_btn">Signup</a>
   </form>
-  <a href="signup.php">Not a member?Please signup!</a>
+  
 </div>
 <?php } ?>
 </body>
