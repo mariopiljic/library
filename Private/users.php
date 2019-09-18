@@ -14,12 +14,11 @@
 <body>
 
 <?php include('adminheader.php'); ?>
-    <div>
-        <p>Click here if you want to add new user!</p>
-        <a href="insert.php" style="width:80px;" role="button" class="btn btn-danger">Add</a>
-        </div>
-    <div>
-    <div class="table-responsive">
+<div class="table-responsive">
+    <div style=" padding-bottom: 1em;">
+        <a data-toggle="tooltip" title="Click here if you want to add new user!" href="insert.php" style="width:80px;" role="button" class="btn btn-danger">Add</a>
+    </div>
+    
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -58,7 +57,7 @@
             <?php } ?>
             
         </table>
-    </div>
+</div>
 <script type="text/javascript">
     $(document).ready(function(){
       $("a.delete").click(function(e){
@@ -73,4 +72,4 @@
 
   <?php include('adminfooter.php'); ?>
 </body>
-</html> 
+</html>  
