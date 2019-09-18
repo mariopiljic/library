@@ -10,16 +10,18 @@
   <script  src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <link href="../Public/library.css" rel="stylesheet">
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 
   <?php include('adminheader.php'); ?>
-    <div>
-        <p>Click here if you want to add new book!</p>
-        <a href="insertbook.php" style="width:80px;" role="button" class="btn btn-danger">Add</a>
-        </div>
-    <div>
-    <div class="table-responsive">
+  <div class="table-responsive">
+    <div style="padding-bottom: 1em;">
+        <a data-toggle="tooltip" title="Click here if you want to add new book!" href="insertbook.php" style="width:80px;" role="button" class="btn btn-danger">Add</a>
+    </div>
+    
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -54,7 +56,7 @@
             <?php } ?>
             
         </table>
-    </div>
+</div>
 <script type="text/javascript">
     $(document).ready(function(){
       $("a.delete").click(function(e){
@@ -67,6 +69,6 @@
     });
 </script>
 
-  <?php include('adminfooter.php'); ?>
+<?php include('adminfooter.php'); ?>
 </body>
 </html>  
