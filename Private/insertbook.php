@@ -26,19 +26,30 @@
         $title = mysqli_real_escape_string($db, $_POST['title']);
         $author = mysqli_real_escape_string($db, $_POST['author']);    
         $section = mysqli_real_escape_string($db, $_POST['section']); 
-       
-        $query = "INSERT into `books` (title, author, section)
-                        VALUES ('$title', '$author', '$section')";
+        
+        $query = "SELECT * FROM `books` WHERE title = '$title'";
+        $result = $db->query($query);
+        $rows = mysqli_num_rows($result);
+        if($rows == 1){
+          echo 
+            "<div id='minh'>
+              <h3>You already have a book with that title.</h3>
+              <a data-toggle='tooltip' title='Click here to go back.' href='insertbook.php' style='width:80px;' role='button' class='btn btn-primary'>Back</a>
+            </div>";
+        } else{
+        
+                  $query = "INSERT into `books` (title, author, section)
+                                        VALUES ('$title', '$author', '$section')";
+                  $result = $db->query($query);
                 
-                $result = $db->query($query);
-                
-                if($result){
+                  if($result){
                     echo 
                       "<div id='minh'>
                         <h3>You added new book successfully.</h3>
                         <a data-toggle='tooltip' title='Click here to continue.' href='books.php' style='width:80px;' role='button' class='btn btn-success'>Back</a>
                       </div>";
-                }
+                  }
+          }
     } else{
 ?>
 <div id="insertbook" class="container">
