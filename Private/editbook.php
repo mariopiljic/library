@@ -31,8 +31,19 @@
         $title = mysqli_real_escape_string($db, $_POST['title']);
         $author = mysqli_real_escape_string($db, $_POST['author']);    
         $section = mysqli_real_escape_string($db, $_POST['section']); 
-       
-        $query = "UPDATE `books` SET title = '$title', author = '$author', section = '$section' WHERE id = '$id'";
+        
+        $query = "SELECT * FROM `books` WHERE title = '$title'";
+        $result = $db->query($query);
+        $rows = mysqli_num_rows($result);
+        if($rows == 1){
+          echo 
+            "<div id='minh'>
+              <h3>You already have a book with that title.</h3>
+              <a data-toggle='tooltip' title='Click here to go back.' href='books.php' style='width:80px;' role='button' class='btn btn-primary'>Back</a>
+            </div>";
+        } else{
+        
+                $query = "UPDATE `books` SET title = '$title', author = '$author', section = '$section' WHERE id = '$id'";
                             
                 $result = $db->query($query);
                 
@@ -42,8 +53,9 @@
                         <h3>You edited book successfully.</h3>
                         <a data-toggle='tooltip' title='Click here to continue.' href='books.php' style='width:80px;' role='button' class='btn btn-success'>Back</a>
                       </div>";
-            }
-  } else{
+                }
+          }
+    } else{
 ?>
 <div id="editbook" class="container">
   <h2>Editing Book</h2>
