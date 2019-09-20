@@ -35,12 +35,30 @@ if (isset($_POST['username'])){
           header("Location: index.php");
           }
         } else{
-      echo "<div id='minh'>
-              <h3>Username or password is incorrect.</h3>
-              <a data-toggle='tooltip' title='Click here to try again.' style='width:80px;' href='login.php' role='button' class='btn btn-primary' name='login_btn'>Login</a> 
-            </div>";
+                echo 
+                  "<div id='login' class='container'>
+                    <h2 style='color:red;'>Wrong username or password!!</h2>
+                    <p>Please try again.</p>
+                    <form action='' class='was-validated' method='post'>
+                  
+                      <div class='form-group'>
+                        <label for='username'>Username:</label>
+                        <input type='text' class='form-control' id='username' placeholder='Enter username' name='username' required>
+                        <div class='valid-feedback'>Valid.</div>
+                        <div class='invalid-feedback'>Please enter username.</div>
+                      </div>
+                      <div class='form-group'>
+                        <label for='password'>Password:</label>
+                        <input type='password' class='form-control' id='password' placeholder='Enter password' name='password' required>
+                        <div class='valid-feedback'>Valid.</div>
+                        <div class='invalid-feedback'>Please enter password.</div>
+                      </div>
+                      <button style='width:80px;' type='submit' class='btn btn-primary' name='login_btn'>Login</button>
+                      <a style='float:right; width:80px;' href='signup.php' role='button' class='btn btn-primary' name='signup_btn'>Signup</a>
+                    </form>
+                  </div>";
           }
-}else{
+    }else{
 ?>
 <div id="login" class="container">
   <h2>Enter username and password</h2>
